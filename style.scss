@@ -123,3 +123,43 @@ header{
         transition: 200ms ease-in;
     }
 }
+
+footer{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:"titre sous-titre sous-titre",
+                        "siteOff maps monInsta",
+                        "navFooter navFooter navFooter";
+
+
+    h2{
+        grid-area: titre;
+        font-size: 80px;
+        font-weight: 900;
+    }
+
+    h3{
+        grid-area: sous-titre;
+    }
+
+    .siteOff{
+        grid-area: siteOff;
+        /*mixin commune pour la box là*/
+    }
+
+    .maps{
+        grid-area: maps;
+        /*mixin commune pour la box là*/
+    }
+
+    .monInsta{
+        grid-area: monInsta;
+        /*mixin commune pour la box là*/
+    }
+
+    .navFooter{
+        grid-area: navFooter;
+    }
+}

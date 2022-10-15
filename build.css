@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -154,6 +155,36 @@ header .bienvenue img {
 .tofCard:hover {
   transform: scale(120%);
   transition: 200ms ease-in;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "titre sous-titre sous-titre", "siteOff maps monInsta", "navFooter navFooter navFooter";
+}
+footer h2 {
+  grid-area: titre;
+  font-size: 80px;
+  font-weight: 900;
+}
+footer h3 {
+  grid-area: sous-titre;
+}
+footer .siteOff {
+  grid-area: siteOff;
+  /*mixin commune pour la box là*/
+}
+footer .maps {
+  grid-area: maps;
+  /*mixin commune pour la box là*/
+}
+footer .monInsta {
+  grid-area: monInsta;
+  /*mixin commune pour la box là*/
+}
+footer .navFooter {
+  grid-area: navFooter;
 }
 
 /*# sourceMappingURL=build.css.map */
