@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: segoe UI;
+  scroll-behavior: smooth;
 }
 
 header #banner {
@@ -126,6 +127,33 @@ header .bienvenue img {
   height: 50vh;
   width: 40vw;
   object-fit: cover;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.tofCard {
+  background: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.tofCard img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.tofCard h2 {
+  padding: 20px;
+  font-size: 24px;
+}
+.tofCard:hover {
+  transform: scale(120%);
+  transition: 200ms ease-in;
 }
 
 /*# sourceMappingURL=build.css.map */
