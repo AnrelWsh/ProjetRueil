@@ -1,0 +1,36 @@
+@mixin cardInfos($flexdir, $boRad, $boLeft: null, $boRight: null){
+    display: flex;
+    flex-direction: $flexdir;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0 4%;
+    padding: 0 1%;
+    border: 4px solid black;
+    border-radius: $boRad;
+    border-top: none;
+    
+    @if ($boLeft != null) {
+        border-left: $boLeft;
+    }
+
+    @if ($boRight != null) {
+        border-right: $boRight;
+    }
+
+
+    &-txt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40vw;
+
+        h3{
+            padding:1%;
+            font-size: 25px;
+        }
+        p{
+            padding:1%;
+        }
+    }
+}
