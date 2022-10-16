@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -158,33 +157,81 @@ header .bienvenue img {
 }
 
 footer {
+  margin-top: 8vh;
+  background-color: #004180;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "titre sous-titre sous-titre", "siteOff maps monInsta", "navFooter navFooter navFooter";
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto 10vh;
+  grid-template-areas: "titre sous-titre sous-titre" "siteOff maps monInsta" "navFooter navFooter navFooter";
 }
 footer h2 {
   grid-area: titre;
   font-size: 80px;
   font-weight: 900;
+  color: ivory;
+  padding: 4vh 0;
 }
 footer h3 {
   grid-area: sous-titre;
+  color: ivory;
 }
-footer .siteOff {
+footer #siteOff {
   grid-area: siteOff;
-  /*mixin commune pour la box là*/
+  transition: ease-in-out 500ms;
+  padding: 4vh 4vw;
+  background-color: ivory;
+  font-size: 20px;
+  color: #251A06;
+  text-decoration: none;
 }
-footer .maps {
+footer #siteOff:hover {
+  background-color: #ED1D24;
+  color: ivory;
+  transition: ease-in-out 500ms;
+  border-radius: 25px;
+}
+footer #maps {
   grid-area: maps;
-  /*mixin commune pour la box là*/
+  transition: ease-in-out 500ms;
+  padding: 4vh 4vw;
+  background-color: ivory;
+  font-size: 20px;
+  color: #251A06;
+  text-decoration: none;
 }
-footer .monInsta {
+footer #maps:hover {
+  background-color: #ED1D24;
+  color: ivory;
+  transition: ease-in-out 500ms;
+  border-radius: 25px;
+}
+footer #monInsta {
   grid-area: monInsta;
-  /*mixin commune pour la box là*/
+  transition: ease-in-out 500ms;
+  padding: 4vh 4vw;
+  background-color: ivory;
+  font-size: 20px;
+  color: #251A06;
+  text-decoration: none;
+}
+footer #monInsta:hover {
+  background-color: #ED1D24;
+  color: ivory;
+  transition: ease-in-out 500ms;
+  border-radius: 25px;
 }
 footer .navFooter {
+  border-top: 3px solid ivory;
   grid-area: navFooter;
+  width: 100%;
+  text-align: center;
+  margin-top: 5vh;
+}
+footer .navFooter a {
+  padding: 0 3vw;
+  color: ivory;
 }
 
 /*# sourceMappingURL=build.css.map */

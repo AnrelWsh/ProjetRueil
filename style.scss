@@ -7,6 +7,7 @@
     font-family: segoe UI;
     scroll-behavior: smooth;
 }
+
 header{
     #banner{
         width: 100%;
@@ -84,15 +85,16 @@ header{
 .cardInfos1{
     @include mixins.cardInfos(row, 25px 0, none);
 }
+
 .cardInfos2{
     @include mixins.cardInfos(row-reverse, 0 25px, null, none);
 }
+
 .imgInfos{
     height: 50vh;
     width: 40vw;
     object-fit: cover;
 }
-
 
 .photos {
     display: grid;
@@ -125,12 +127,15 @@ header{
 }
 
 footer{
-
+    margin-top: 8vh;
+    background-color: #004180;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:"titre sous-titre sous-titre",
-                        "siteOff maps monInsta",
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 10vh;
+    grid-template-areas:"titre sous-titre sous-titre"
+                        "siteOff maps monInsta"
                         "navFooter navFooter navFooter";
 
 
@@ -138,28 +143,40 @@ footer{
         grid-area: titre;
         font-size: 80px;
         font-weight: 900;
+        color: ivory;
+        padding: 4vh 0;
     }
 
     h3{
         grid-area: sous-titre;
+        color: ivory;
     }
 
-    .siteOff{
+    #siteOff{
         grid-area: siteOff;
-        /*mixin commune pour la box là*/
+        @include mixins.btnFooter();
     }
 
-    .maps{
+    #maps{
         grid-area: maps;
-        /*mixin commune pour la box là*/
+        @include mixins.btnFooter();
     }
 
-    .monInsta{
+    #monInsta{
         grid-area: monInsta;
-        /*mixin commune pour la box là*/
+        @include mixins.btnFooter();
     }
 
     .navFooter{
+        border-top: 3px solid ivory;
         grid-area: navFooter;
+        width: 100%;
+        text-align: center;
+        margin-top: 5vh;
+
+        a{
+            padding: 0 3vw;
+            color: ivory;
+        }
     }
 }
