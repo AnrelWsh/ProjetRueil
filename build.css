@@ -19,14 +19,32 @@ header .bienvenue {
   display: flex;
   background-color: #fff;
   border-radius: 0 25px 25px 0;
+  animation: bvnSlide 2s ease;
 }
 header .bienvenue-txt {
   padding: 5px 20px;
+  animation: bvnTxt 4s ease;
 }
 header .bienvenue img {
   width: 8vw;
 }
 
+@keyframes bvnSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes bvnTxt {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #navbar {
   width: 100%;
   height: 90px;
@@ -76,7 +94,7 @@ header .bienvenue img {
   justify-content: space-around;
   gap: 20px;
   margin: 0 4%;
-  padding: 0 1%;
+  padding: 1% 1%;
   border: 4px solid black;
   border-radius: 25px 0;
   border-top: none;
@@ -87,10 +105,18 @@ header .bienvenue img {
   flex-direction: column;
   align-items: center;
   width: 40vw;
+  transition: ease-in-out 500ms;
 }
 .cardInfos1-txt h3 {
   padding: 1%;
   font-size: 25px;
+}
+.cardInfos1-txt h4 {
+  cursor: pointer;
+}
+.cardInfos1-txt h4:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 500ms;
 }
 .cardInfos1-txt p {
   padding: 1%;
@@ -103,7 +129,7 @@ header .bienvenue img {
   justify-content: space-around;
   gap: 20px;
   margin: 0 4%;
-  padding: 0 1%;
+  padding: 1% 1%;
   border: 4px solid black;
   border-radius: 0 25px;
   border-top: none;
@@ -114,13 +140,28 @@ header .bienvenue img {
   flex-direction: column;
   align-items: center;
   width: 40vw;
+  transition: ease-in-out 500ms;
 }
 .cardInfos2-txt h3 {
   padding: 1%;
   font-size: 25px;
 }
+.cardInfos2-txt h4 {
+  cursor: pointer;
+}
+.cardInfos2-txt h4:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 500ms;
+}
 .cardInfos2-txt p {
   padding: 1%;
+}
+.cardInfos2 p {
+  display: none;
+  transition: ease-in-out 500ms;
+}
+.cardInfos2 #jubP {
+  display: block;
 }
 
 .imgInfos {
