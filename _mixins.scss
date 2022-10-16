@@ -10,6 +10,14 @@
     border-radius: $boRad;
     border-top: none;
     
+    @media screen and (max-width:950px) {
+        flex-direction: column-reverse;
+
+        p{
+            padding: 0;
+        }
+    }
+
     @if ($boLeft != null) {
         border-left: $boLeft;
     }

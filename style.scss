@@ -77,6 +77,10 @@ header{
         @include mixins.responsive(1117px){
             width: 20%;
         }
+
+        @include mixins.responsive(700px){
+            width: 40%;
+        }
     } 
 
     .nav{
@@ -113,6 +117,8 @@ header{
         img{
             width: 25vw;
         }
+
+    
     }
 }
 
@@ -145,6 +151,14 @@ header{
     gap: 40px;
     max-width: 80%;
     margin: 0 auto;
+
+    @include mixins.responsive(1000px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixins.responsive(700px){
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .tofCard {
@@ -181,6 +195,18 @@ footer{
                         "siteOff maps monInsta"
                         "navFooter navFooter navFooter";
 
+    @include mixins.responsive(1000px){
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto auto auto 10vh;
+        grid-template-areas:"titre"
+                            "sous-titre"     
+                            "siteOff"
+                            "maps"
+                            "monInsta"
+                            "navFooter";
+
+        gap: 20px;
+    }
 
     h2{
         grid-area: titre;
@@ -193,6 +219,10 @@ footer{
     h3{
         grid-area: sous-titre;
         color: ivory;
+
+        @include mixins.responsive(1000px){
+            text-align: center;
+        }
     }
 
     #siteOff{
@@ -210,6 +240,11 @@ footer{
         @include mixins.btnFooter();
     }
 
+    h4{
+        @include mixins.responsive(1117px){
+            font-size: 15px ;
+        }
+    }
     .navFooter{
         border-top: 3px solid ivory;
         grid-area: navFooter;

@@ -72,6 +72,11 @@ header .bienvenue img {
     width: 20%;
   }
 }
+@media screen and (max-width: 700px) {
+  #navbar img {
+    width: 40%;
+  }
+}
 #navbar .nav ul {
   display: flex;
   gap: 10px;
@@ -116,6 +121,14 @@ header .bienvenue img {
   border-top: none;
   border-left: none;
 }
+@media screen and (max-width: 950px) {
+  .cardInfos1 {
+    flex-direction: column-reverse;
+  }
+  .cardInfos1 p {
+    padding: 0;
+  }
+}
 .cardInfos1-txt {
   display: flex;
   flex-direction: column;
@@ -150,6 +163,14 @@ header .bienvenue img {
   border-radius: 0 25px;
   border-top: none;
   border-right: none;
+}
+@media screen and (max-width: 950px) {
+  .cardInfos2 {
+    flex-direction: column-reverse;
+  }
+  .cardInfos2 p {
+    padding: 0;
+  }
 }
 .cardInfos2-txt {
   display: flex;
@@ -193,6 +214,16 @@ header .bienvenue img {
   max-width: 80%;
   margin: 0 auto;
 }
+@media screen and (max-width: 1000px) {
+  .photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  .photos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .tofCard {
   background: white;
@@ -223,6 +254,14 @@ footer {
   grid-template-rows: auto auto 10vh;
   grid-template-areas: "titre sous-titre sous-titre" "siteOff maps monInsta" "navFooter navFooter navFooter";
 }
+@media screen and (max-width: 1000px) {
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto auto auto 10vh;
+    grid-template-areas: "titre" "sous-titre" "siteOff" "maps" "monInsta" "navFooter";
+    gap: 20px;
+  }
+}
 footer h2 {
   grid-area: titre;
   font-size: 80px;
@@ -233,6 +272,11 @@ footer h2 {
 footer h3 {
   grid-area: sous-titre;
   color: ivory;
+}
+@media screen and (max-width: 1000px) {
+  footer h3 {
+    text-align: center;
+  }
 }
 footer #siteOff {
   grid-area: siteOff;
@@ -278,6 +322,11 @@ footer #monInsta:hover {
   color: ivory;
   transition: ease-in-out 500ms;
   border-radius: 25px;
+}
+@media screen and (max-width: 1117px) {
+  footer h4 {
+    font-size: 15px;
+  }
 }
 footer .navFooter {
   border-top: 3px solid ivory;
