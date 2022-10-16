@@ -17,6 +17,7 @@ header .bienvenue {
   top: 45vh;
   z-index: 1;
   display: flex;
+  align-items: center;
   background-color: #fff;
   border-radius: 0 25px 25px 0;
   animation: bvnSlide 2s ease;
@@ -27,6 +28,11 @@ header .bienvenue-txt {
 }
 header .bienvenue img {
   width: 8vw;
+}
+@media screen and (max-width: 1117px) {
+  header .bienvenue img {
+    width: 15vw;
+  }
 }
 
 @keyframes bvnSlide {
@@ -61,6 +67,11 @@ header .bienvenue img {
 #navbar img {
   width: 10%;
 }
+@media screen and (max-width: 1117px) {
+  #navbar img {
+    width: 20%;
+  }
+}
 #navbar .nav ul {
   display: flex;
   gap: 10px;
@@ -85,6 +96,11 @@ header .bienvenue img {
 .sep h2 {
   font-size: 80px;
   font-weight: 900;
+}
+@media screen and (max-width: 1117px) {
+  .sep img {
+    width: 25vw;
+  }
 }
 
 .cardInfos1 {
@@ -212,7 +228,7 @@ footer h2 {
   font-size: 80px;
   font-weight: 900;
   color: ivory;
-  padding: 4vh 0;
+  padding: 4vh 2vw;
 }
 footer h3 {
   grid-area: sous-titre;
