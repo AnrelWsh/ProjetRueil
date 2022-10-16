@@ -43,3 +43,27 @@ if(sci.style.display == "none"){
 })
 
 
+let imgGen = document.getElementById("imgGen")
+const p1 = document.getElementById("info1")
+const p2 = document.getElementById("info2")
+const p3 = document.getElementById("info3")
+
+p1.mouseover = function(){
+    imgGen.src = "img/pde.jpg" 
+}
+p2.mouseover = function(){
+    imgGen.src = "img/cucuf.jpg" 
+}
+p3.mouseover = function(){
+    imgGen.src = "img/cormaillons.jpg" 
+}
+
+p1.addEventListener('mouseover', () => {
+    imgGen.src = "img/pde.jpg" 
+})
+p2.addEventListener('mouseover', () => {
+    imgGen.src = "img/cucuf.jpg"
+})
+p3.addEventListener('mouseover', () => {
+    imgGen.src = "img/cormaillons.jpg" 
+})
