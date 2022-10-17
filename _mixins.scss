@@ -10,13 +10,7 @@
     border-radius: $boRad;
     border-top: none;
     
-    @media screen and (max-width:950px) {
-        flex-direction: column-reverse;
 
-        p{
-            padding: 0;
-        }
-    }
 
     @if ($boLeft != null) {
         border-left: $boLeft;
@@ -26,6 +20,9 @@
         border-right: $boRight;
     }
 
+    @media screen and (max-width:950px) {
+        flex-direction: column-reverse;
+    }
 
     &-txt{
         display: flex;
@@ -34,8 +31,14 @@
         width: 40vw;
         transition: ease-in-out 500ms;
 
+        @media screen and (max-width:950px) {
+            p{
+                padding: 0;
+                width: 80vw;
+            }
+        }
+
         h3{
-            padding:1%;
             font-size: 25px;
         }
         h4{

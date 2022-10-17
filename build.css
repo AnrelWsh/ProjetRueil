@@ -24,7 +24,18 @@ header .bienvenue {
 }
 header .bienvenue-txt {
   padding: 5px 20px;
+  width: 50vw;
   animation: bvnTxt 4s ease;
+}
+@media screen and (max-width: 1000px) {
+  header .bienvenue-txt {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 710px) {
+  header .bienvenue-txt {
+    width: 80vw;
+  }
 }
 header .bienvenue img {
   width: 8vw;
@@ -102,9 +113,19 @@ header .bienvenue img {
   font-size: 80px;
   font-weight: 900;
 }
+@media screen and (max-width: 800px) {
+  .sep h2 {
+    font-size: 60px;
+  }
+}
 @media screen and (max-width: 1117px) {
   .sep img {
     width: 25vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sep img {
+    width: 15vw;
   }
 }
 
@@ -125,9 +146,6 @@ header .bienvenue img {
   .cardInfos1 {
     flex-direction: column-reverse;
   }
-  .cardInfos1 p {
-    padding: 0;
-  }
 }
 .cardInfos1-txt {
   display: flex;
@@ -136,8 +154,13 @@ header .bienvenue img {
   width: 40vw;
   transition: ease-in-out 500ms;
 }
+@media screen and (max-width: 950px) {
+  .cardInfos1-txt p {
+    padding: 0;
+    width: 80vw;
+  }
+}
 .cardInfos1-txt h3 {
-  padding: 1%;
   font-size: 25px;
 }
 .cardInfos1-txt h4 {
@@ -168,9 +191,6 @@ header .bienvenue img {
   .cardInfos2 {
     flex-direction: column-reverse;
   }
-  .cardInfos2 p {
-    padding: 0;
-  }
 }
 .cardInfos2-txt {
   display: flex;
@@ -179,8 +199,13 @@ header .bienvenue img {
   width: 40vw;
   transition: ease-in-out 500ms;
 }
+@media screen and (max-width: 950px) {
+  .cardInfos2-txt p {
+    padding: 0;
+    width: 80vw;
+  }
+}
 .cardInfos2-txt h3 {
-  padding: 1%;
   font-size: 25px;
 }
 .cardInfos2-txt h4 {
@@ -205,6 +230,11 @@ header .bienvenue img {
   height: 50vh;
   width: 40vw;
   object-fit: cover;
+}
+@media screen and (max-width: 950px) {
+  .imgInfos {
+    width: 80vw;
+  }
 }
 
 .photos {
@@ -235,13 +265,15 @@ header .bienvenue img {
   object-fit: cover;
   object-position: center;
 }
-.tofCard h2 {
-  padding: 20px;
-  font-size: 24px;
-}
 .tofCard:hover {
   transform: scale(120%);
   transition: 200ms ease-in;
+}
+.tofCard h4 {
+  padding: 0 0 0 1%;
+}
+.tofCard h5 {
+  padding: 0 0 1% 1%;
 }
 
 footer {
@@ -264,7 +296,7 @@ footer {
 }
 footer h2 {
   grid-area: titre;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 900;
   color: ivory;
   padding: 4vh 2vw;
